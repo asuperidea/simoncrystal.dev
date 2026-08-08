@@ -1,0 +1,96 @@
+:root {
+        --primary: #FFFCF5;
+        --text: #1A1918;
+        --red: #780000;
+        --blue: #003049;
+        --light-blue: #669BBC;
+        --light-red: #C1121F;
+    }
+body{
+    background-color: var(--primary);
+}
+
+.raleway-reg {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+.raleway-light {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+.raleway-med {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+.raleway-bold {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+}
+
+
+.jost-reg {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+.jost-light {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+.jost-med {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+.jost-bold {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+#headline {
+    width: 50%;
+    display: block;
+    align-items: center;
+    margin: auto;
+    margin-top: 18rem;
+}
+#headlinetext {
+    font-size: 32px; 
+    text-align: center;
+    margin-top: 0;
+}
+#menuitems {
+    width: 95%;
+    height: 2rem;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+#menuitem {
+    font-size: 24px;
+    margin-top: -.2rem;
+    color: var(--text);
+    text-decoration: none;
+}
+#menuitem:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+#menuline {
+    width: 100%;
+}
+
+#viewcall {
+    width: 20%;
+    outline: 1px solid red;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20rem;
+}
