@@ -19,7 +19,6 @@ Isaac was built for the [Hackclub](https://hackclub.com/) program [Macondo](http
 <hr>
 
 [Github](https://github.com/RiptideVideos/Isaac-The-Carpentopod/)  
-[Raw Markdown](/Stories/Isaac.md)  
 [Macondo Project](https://macondo.hackclub.com/projects/7520)  
 [Video 1](https://youtube.com/shorts/_IkzzDk3RVs)  
 [Video 2](https://youtube.com/shorts/l0Tr8de97ck)  

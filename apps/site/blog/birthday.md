@@ -1,4 +1,3 @@
-> HTML, CSS, Design
 # My Birthday Website
 From **late April to mid May of 2025** I designed and created a website to convince my family to get me a Mac Mini. I was inspired by [Beno Grids](https://bentogrids.com/) and [Nev Flynn's Dev Site](nevflynn.com). I made my site on an old all-in-one computer.
 
