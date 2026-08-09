@@ -27,3 +27,6 @@ const projects = files.map(file => {
 
 fs.writeFileSync(outputPath, JSON.stringify(projects, null, 2));
 console.log(`${projects.length} projects written to ${outputPath}`);
+
+/* Blog code */
+

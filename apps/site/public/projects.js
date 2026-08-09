@@ -11,6 +11,7 @@ fetch('projects.json')
                 </div>
                 <hr style="margin-bottom: -1rem;">
                 <div id="project-body"><p class="jost-reg">${project.html}</p></div>
+                <hr style="margin-bottom: 1rem;">
                 <div id="project-links">${project.links.map(link => `<p class="jost-reg">${link}</p>`).join('')}</div>
             `;
             container.appendChild(div);
