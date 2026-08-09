@@ -1,0 +1,22 @@
+{
+  "name": "simoncrystal.dev",
+  "version": "1.0.0",
+  "description": "my personal site and playground",
+  "main": "build.js",
+  "scripts": {
+    "test": "n/a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiptideVideos/simoncrystal.dev.git"
+  },
+  "keywords": [
+    "n/a"
+  ],
+  "author": "Simon Crystal",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/RiptideVideos/simoncrystal.dev/issues"
+  },
+  "homepage": "https://github.com/RiptideVideos/simoncrystal.dev#readme"
+}

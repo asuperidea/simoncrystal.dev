@@ -3,7 +3,7 @@ const path = require('path');
 const { marked } = require('marked');
 
 const projectsDir = path.join(__dirname, 'apps', 'site', 'projects');
-const outputPath = path.join(__dirname, 'apps', 'site', 'projects.json');
+const outputPath = path.join(__dirname, 'apps', 'site', 'public', 'projects.json');
 
 const files = fs.readdirSync(projectsDir).filter(f => f.endsWith('.md'));
 
