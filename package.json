@@ -12,6 +12,7 @@
         "marked": "^18.0.9"
       }
     },
+  "dependencies": {
     "node_modules/marked": {
       "version": "18.0.9",
       "resolved": "https://registry.npmjs.org/marked/-/marked-18.0.9.tgz",
@@ -24,5 +25,6 @@
         "node": ">= 20"
       }
     }
+  }
   }
 }
