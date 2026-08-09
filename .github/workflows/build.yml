@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: 24
       - run: npm install
+        working-directory: apps/site
       - run: node build.js
+        working-directory: apps/site
       - name: Commit updated JSON
         run: |
           git config user.name "github-actions"
