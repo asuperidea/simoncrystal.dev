@@ -21,6 +21,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add /app/site/public/projects.json
+          git add   /apps/site/public/projects.json
           git commit -m "updated projects.json via github actions" || echo "No changes"
           git push
