@@ -30,3 +30,28 @@ console.log(`${projects.length} projects written to ${outputPath}`);
 
 /* Blog code */
 
+const blogsDir = path.join(__dirname, 'blogs', 'blog');
+const outputPathBlogs = path.join(__dirname, 'apps', 'site', 'public', 'blogs.json');
+
+const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith('.md'));
+
+const blogs = blogFiles.map(file => {
+    const raw = fs.readFileSync(path.join(blogsDir, file), 'utf-8');
+    return {
+        id: file.replace('.md', ''),
+        url: "blogs"/file.replace('.md', ''),
+        heading: raw
+        .split('\n')[0]
+        .replace('# ', ''),
+        html: marked.parseInline(raw
+            .replace(/^# .*\n?/gm, '')
+            .replace(/^> .*\n?/gm, '')),
+        lead: marked.parseInline(raw
+            .replace(/^# .*\n?/gm, '')
+            .replace(/^> .*\n?/gm, ''))
+            .slice(0, 25),
+    };
+});
+
+fs.writeFileSync(outputPath, JSON.stringify(projects, null, 2));
+console.log(`${projects.length} projects written to ${outputPath}`);

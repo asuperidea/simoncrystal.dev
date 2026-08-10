@@ -170,7 +170,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
 }
 #project {
-    outline: 2px solid var(--text);
+    outline: 1px solid var(--text);
     border-radius: .5em;
     width: 28%;
     min-width: 20rem;
@@ -197,4 +197,30 @@ footer {
 #fttext {
     color: white !important;
     font-size: 12px;
+}
+#blogbox {
+    width: 90%;
+    height: 50rem;
+    max-width: 90rem;
+    justify-items: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+}
+#blog {
+    outline: 1px solid var(--text);
+    border-radius: .5em;
+    width: 90%;
+    min-width: 20rem;
+    height: 24rem;
+    padding: 1%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+#bloghead {
+    margin-top: .1rem;
+    text-align: left;
+    width: 50%;
 }
