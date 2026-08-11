@@ -1,0 +1,11 @@
+div {
+    outline: 1px solid red;
+}
+.headline {
+    height: 20rem;
+    width: 50%;
+    min-width: 25rem;
+    max-width: 35rem;
+    margin: auto;
+    margin-top: 20rem;
+}
