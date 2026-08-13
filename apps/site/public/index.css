@@ -1,11 +1,60 @@
 div {
     outline: 1px solid red;
 }
+.hero {
+    height: 35rem;
+    width: 100%;
+    background-color: var(--primary);
+    background-image: 
+    linear-gradient(rgb(250, 250, 250, 1) .1em, transparent .1rem), 
+    linear-gradient(90deg, rgba(250, 250, 250, 1) .1rem, transparent .1rem);
+    background-size: 1rem 1rem;
+}
 .headline {
-    height: 20rem;
+    height: 12rem;
     width: 50%;
     min-width: 25rem;
     max-width: 35rem;
     margin: auto;
-    margin-top: 20rem;
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+}
+.social {
+    gap: 2rem;
+}
+
+.nav {
+    height: 2rem;
+    width: 70%;
+    margin-top: 5rem;
+    min-width: 25rem;
+    gap: 2rem;
+}
+.nav-btn {
+    background-color: var(--primary);
+    color: var(--text);
+    border: .7px solid var(--text);
+    border-radius: .2rem;
+    text-align: center;
+    width: 6rem;
+    height: 2rem;
+    transition: all .1s ease-in-out;
+}
+.nav-btn:hover {
+    color: var(--light-blue);
+    border: .7px solid var(--light-blue);
+}
+.nav-btn:active {
+    color: var(--blue);
+    border: .7px solid var(--blue);
+}
+
+.projects {
+    width: 100%;
+    height: 40rem;
+    background-color: var(--text);
+    background-image: 
+    linear-gradient(rgb(30, 30, 30, 1) .1em, transparent .1rem), 
+    linear-gradient(90deg, rgba(30, 30, 30, 1) .1rem, transparent .1rem);
+    background-size: 1rem 1rem;
 }

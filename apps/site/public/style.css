@@ -1,6 +1,7 @@
 :root {
         --primary: #fffefc;
         --text: #1A1918;
+        --text2: #3e3d3b;
         --red: #780000;
         --blue: #003049;
         --light-blue: #669BBC;
@@ -17,16 +18,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 body{
-    background-color: var(--primary);
     margin: 0;   
 }
 a {
-    color: var(--blue);
-    text-decoration: none;
+    color: var(--text) !important;
+    text-decoration: none !important;
     transition: color .1s ease-in-out;
 }
 a:hover {
-    color: var(--light-blue);
+    color: var(--light-blue) !important;
     text-decoration: underline;
 }
 
@@ -71,4 +71,10 @@ a:hover {
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
+}
+
+.poiret-reg {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
