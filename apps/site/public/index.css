@@ -1,5 +1,5 @@
 div {
-    outline: 1px solid red;
+    outline: 0px solid red;
 }
 .hero {
     height: 35rem;
@@ -96,7 +96,7 @@ div {
     margin-top: 3rem;
     margin-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 16rem));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 45rem));
     justify-content: space-evenly;
     gap: 1rem;
 }
