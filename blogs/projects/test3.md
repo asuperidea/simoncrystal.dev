@@ -1,3 +1,0 @@
-# Birthday Site
-From **late April to mid May of 2025** I designed and created a website to convince my family to get me a Mac Mini. I was inspired by [Beno Grids](https://bentogrids.com/) and [Nev Flynn's Dev Site](nevflynn.com). I made my site on an old all-in-one computer. My site featured a four wide gride I used to showcase reasons I wanted my Mac Mini. Each box was a very basic div: rounded corners and a black border. To adapt to smaller screens, I added basic CSS responive web design (RWD) to shrink boxes down and cut the gride width. This was my first time using RWD and it shows. Much of the shrinking is messy and breaks some parts of the site.
-> [Github](https://github.com/RiptideVideos/BDay/tree/main)
