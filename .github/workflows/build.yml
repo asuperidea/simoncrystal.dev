@@ -3,6 +3,7 @@ name: build projects.json via build.js
 on:
   push:
     branches: [main]
+    paths: /blogs
 
 permissions:
   contents: write
