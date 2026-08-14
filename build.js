@@ -16,12 +16,13 @@ const projects = files.map(file => {
         .replace('# ', ''),
         html: marked.parseInline(raw
             .replace(/^# .*\n?/gm, '')
-            .replace(/^> .*\n?/gm, '')),
+            .replace(/^> .*\n?/gm, ''))
+            .replace(/<a /g, '<a class="colorpri" '),
         links: raw
             .split('\n')
             .filter(line => line.startsWith('> '))
             .map(line => line.replace(/^> /, ''))
-            .map(link => { return marked.parseInline(link); })
+            .map(link => { return marked.parseInline(link).replace(/<a /g, '<a class="colorpri" '); })
     };
 });
 
@@ -36,22 +37,22 @@ const outputPathBlogs = path.join(__dirname, 'apps', 'site', 'public', 'blogs.js
 const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith('.md'));
 
 const blogs = blogFiles.map(file => {
-    const raw = fs.readFileSync(path.join(blogsDir, file), 'utf-8');
+    const rawBlogs = fs.readFileSync(path.join(blogsDir, file), 'utf-8');
     return {
         id: file.replace('.md', ''),
-        url: "blogs"/file.replace('.md', ''),
-        heading: raw
+        url: "/blogs/"+file.replace('.md', ''),
+        heading: rawBlogs
         .split('\n')[0]
         .replace('# ', ''),
-        html: marked.parseInline(raw
+        html: marked.parseInline(rawBlogs
             .replace(/^# .*\n?/gm, '')
             .replace(/^> .*\n?/gm, '')),
-        lead: marked.parseInline(raw
+        lead: marked.parseInline(rawBlogs
             .replace(/^# .*\n?/gm, '')
             .replace(/^> .*\n?/gm, ''))
-            .slice(0, 25),
+            .slice(0, 75),
     };
 });
 
-fs.writeFileSync(outputPath, JSON.stringify(projects, null, 2));
-console.log(`${projects.length} projects written to ${outputPath}`);
+fs.writeFileSync(outputPathBlogs, JSON.stringify(blogs, null, 2));
+console.log(`${blogs.length} blogs written to ${outputPathBlogs}`);

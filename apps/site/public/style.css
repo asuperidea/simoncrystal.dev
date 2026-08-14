@@ -20,14 +20,18 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 body{
     margin: 0;   
 }
-a {
-    color: var(--text) !important;
-    text-decoration: none !important;
+html a {
+    color: var(--text);
+    text-decoration: none;
     transition: color .1s ease-in-out;
 }
-a:hover {
+
+html a:hover {
     color: var(--light-blue) !important;
     text-decoration: underline;
+}
+html a:active {
+    color: var(--blue) !important;
 }
 
 .raleway-reg {
@@ -55,7 +59,7 @@ a:hover {
 .jost-reg {
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
 }
 .jost-light {
     font-family: "Jost", sans-serif;
@@ -65,7 +69,7 @@ a:hover {
 .jost-med {
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
 }
 .jost-bold {
     font-family: "Jost", sans-serif;
@@ -77,4 +81,14 @@ a:hover {
   font-family: "Poiret One", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.colorpri{
+    color: var(--primary) !important;
+}
+.colorpri{
+    color: var(--primary) !important;
+}
+.colortxt{
+    color: var(--text);
 }
