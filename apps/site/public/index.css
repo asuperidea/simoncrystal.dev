@@ -2,7 +2,7 @@ div {
     outline: 0px solid red;
 }
 .hero {
-    height: 35rem;
+    height: 45rem;
     width: 100%;
     background-color: var(--primary);
     background-image: 
@@ -11,7 +11,7 @@ div {
     background-size: 1rem 1rem;
 }
 .headline {
-    height: 12rem;
+    height: auto;;
     width: 50%;
     min-width: 25rem;
     max-width: 35rem;
@@ -22,7 +22,13 @@ div {
 .social {
     gap: 2rem;
 }
-
+.detailpiece {
+    width: 40%;
+    height: 2rem;
+}
+.detailimg {
+    width: 10%;
+}
 .nav {
     height: 2rem;
     width: 70%;
