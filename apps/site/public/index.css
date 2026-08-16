@@ -107,6 +107,7 @@ div {
     gap: 1rem;
 }
 .blogcard {
+    z-index: 10;
     width: 100%;
     min-width: 25rem;
 }

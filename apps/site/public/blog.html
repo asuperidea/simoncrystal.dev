@@ -12,10 +12,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="blogpagecreate.js"></script>
     <div id="nav" class="d-flex mx-auto mt-4 justify-content-center gap-5 nav">
         <a href="index.html" class="jost-light">Go Back</a>
     </div>
     <div id="content" class="d-flex mx-auto mt-4 justify-content-center content"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('post');
+
+        fetch('blogs.json')
+            .then(res => res.json())
+            .then(blogs => {
+                const post = blogs.find(b => b.slug === slug);
+                const container = document.getElementById('content');
+
+                if (post) {
+                    console.log("Post Found at ", post)
+                    const div = document.createElement('div')
+                    div.id = "innercontent"
+                    div.innerHTML = `
+                        <h1 class="fs-1 jost-bold">${post.heading}</h1>
+                        <h3 class="fs-5 jost-med">${post.subheading}</h3>
+                        <hr>
+                        <p class="jost-reg">${post.html}</p>
+                    `
+                    container.appendChild(div)
+                } else {
+                    container.innerHTML = '<p>Post not found.</p>';
+                }
+            });
+    </script>
 </body>
 </html>

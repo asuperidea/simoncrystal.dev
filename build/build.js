@@ -2,8 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
 
-const projectsDir = path.join(__dirname, 'blogs', 'projects');
-const outputPath = path.join(__dirname, 'apps', 'site', 'public', 'projects.json');
+const rootDir = path.join(__dirname, '..');
+const projectsDir = path.join(rootDir, 'build', 'projects');
+const blogsDir = path.join(rootDir, 'build', 'blog');
+const techDir = path.join(rootDir, 'build', 'tech');
+const outputPath = path.join(rootDir, 'apps', 'site', 'public', 'test.json');
 
 const files = fs.readdirSync(projectsDir).filter(f => f.endsWith('.md'));
 
@@ -12,8 +15,8 @@ const projects = files.map(file => {
     return {
         id: file.replace('.md', ''),
         heading: raw
-        .split('\n')[0]
-        .replace('# ', ''),
+            .split('\n')[0]
+            .replace('# ', ''),
         html: marked.parseInline(raw
             .replace(/^# .*\n?/gm, '')
             .replace(/^> .*\n?/gm, ''))
@@ -22,14 +25,9 @@ const projects = files.map(file => {
             .split('\n')
             .filter(line => line.startsWith('> '))
             .map(line => line.replace(/^> /, ''))
-            .map(link => { return marked.parseInline(link).replace(/<a /g, '<a class="colorpri" '); })
+            .map(link => marked.parseInline(link).replace(/<a /g, '<a class="colorpri" '))
     };
 });
-
-fs.writeFileSync(outputPath, JSON.stringify(projects, null, 2));
-
-const blogsDir = path.join(__dirname, 'blogs', 'blog');
-const outputPathBlogs = path.join(__dirname, 'apps', 'site', 'public', 'blogs.json');
 
 const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith('.md'));
 
@@ -47,20 +45,32 @@ const blogs = blogFiles.map(file => {
             .replace('## ', ''),
         lead: rawBlogs
             .split('\n')[2]
-            .split(" ")
+            .split(' ')
             .slice(0, 50)
-            .join(" "),
+            .join(' '),
         html: marked.parseInline(rawBlogs
             .split('\n')
             .slice(2)
-            .join('\n')
-        ),
+            .join('\n'))
     };
 });
 
-fs.writeFileSync(outputPathBlogs, JSON.stringify(blogs, null, 2));
+const techFiles = fs.readdirSync(techDir).filter(f => f.endsWith('.md'));
 
-console.log(`${blogs.length} blogs written`);
-console.log(`${projects.length} blogs written`);
-console.log('BUILD.JS DONE')
-console.log('')
+const tech = techFiles.map(file => {
+    const rawTech = fs.readFileSync(path.join(techDir, file), 'utf-8');
+    return {
+        heading: rawTech
+            .split('\n')[0]
+            .replace('# ', ''),
+        more: marked.parseInline(rawTech.split('\n')[1]),
+        id: file.replace('.md', '')
+    };
+});
+
+const data = { projects, blogs, tech };
+fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+
+console.log(outputPath);
+console.log('');
