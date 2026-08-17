@@ -15,10 +15,9 @@
     <script src="projects.js"></script>
     <script src="blogs.js"></script>
     <div id="hero" class="hero d-flex flex-column align-items-center">
-        <div id="nav" class="nav mx-auto d-flex justify-content-center">
-        <button class="nav-btn"><p class="jost-light">Projects</p></button>
-        <button class="nav-btn"><p class="jost-light">Blog</p></button>
-        <button class="nav-btn"><p class="jost-light">Academics</p></button>
+        <div id="social" class="d-flex mx-auto justify-content-center gap-5 social">
+            <a href="https://instagram.com/asuperidea"><img src="images/instagram.svg" style="width: 1.5rem;"></a>
+            <a href="https://github.com/asuperidea"><img src="images/github.svg" style="width: 1.5rem;"></a>
         </div>
         <div id="headline" class="headline">
         <h1 class="fs-3 poiret-reg text-center">I'm Simon, learning and engaging in 
@@ -27,7 +26,8 @@
             Electronics,
             CAD, and
             Meteorology</h1>
-        <div class="d-flex justify-content-center gap-3 details">
+        <hr class="mx-auto mt-4 border-black" style="width: 80%;">
+        <div class="d-flex justify-content-center gap-3 mt-3 details">
             <div class="d-flex justify-content-center gap-2 detailpiece">
                 <img src="images/location.svg" class="detailimg">
                 <p class="fs-6 jost-light mt-1">North Carolina</p>
@@ -36,18 +36,14 @@
                 <img src="images/school.svg" class="detailimg">
                 <p class="fs-6 jost-light mt-1">Tenth Grade</p>
             </div>
-            <div id="tech" class="d-flex justify-content-even gap-1 tech"></div>
         </div>
-        <hr class="mx-auto border-black" style="width: 80%;">
-        <div class="social d-flex justify-content-center mx-auto" style="width: 80%;">
-            <button class="nav-btn"><a class="jost-light text-decoration-none" href="https://github.com/asuperidea">GitHub</a></button>
-            <button class="nav-btn"><a class="jost-light text-decoration-none" href="https://instagram.com/asuperidea">Instagram</a></button>
         </div>
+        <div id="techcont" class="d-flex mt-auto mb-2 techcont">
         </div>
     </div>
     <div id="projects" class="projects">
         <div class="projectheadline">
-            <h1 class="fs-1 poiret-reg text-center" style="color: var(--primary)">Projects</h1>
+            <h1 class="fs-1 poiret-reg text-center colorpri">Projects</h1>
         </div>
         <div class="mx-auto projectcards" id="projectcards">
 
@@ -55,7 +51,7 @@
     </div>
     <div id="blogs" class="blogs">
         <div class="blogsheadline">
-            <h1 class="fs-1 poiret-reg text-center" style="color: var(--primary)">My Blog</h1>
+            <h1 class="fs-1 poiret-reg text-center colorpri">My Blog</h1>
         </div>
         <div class="mx-auto blogcards" id="blogcards"></div>
     </div>

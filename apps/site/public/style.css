@@ -17,6 +17,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
+::selection {
+    background-color: var(--text);
+    color: var(--primary);
+}
+.colorpri::selection {
+    background-color: var(--primary);
+    color: var(--text);
+}
 body{
     margin: 0;   
 }
@@ -86,9 +94,7 @@ html a:active {
 .colorpri{
     color: var(--primary) !important;
 }
-.colorpri{
-    color: var(--primary) !important;
-}
+
 .colortxt{
     color: var(--text);
 }

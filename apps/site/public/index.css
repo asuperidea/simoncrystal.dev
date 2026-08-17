@@ -16,11 +16,13 @@ div {
     min-width: 25rem;
     max-width: 35rem;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 12rem;
 }
 .social {
-    gap: 2rem;
+    width: 50%;
+    height: 2rem;
+    margin-top: 10rem;
 }
 .detailpiece {
     width: 40%;
@@ -29,30 +31,18 @@ div {
 .detailimg {
     width: 10%;
 }
-.nav {
+
+.techcont {
+    height: auto;
+    min-height: 2rem;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.techcard {
+    width: auto;
+    min-width: 6rem;
     height: 2rem;
-    width: 70%;
-    margin-top: 5rem;
-    min-width: 25rem;
-    gap: 2rem;
-}
-.nav-btn {
-    background-color: var(--primary);
-    color: var(--text);
-    border: .7px solid var(--text);
-    border-radius: .2rem;
-    text-align: center;
-    width: 6rem;
-    height: 2rem;
-    transition: all .1s ease-in-out;
-}
-.nav-btn:hover {
-    color: var(--light-blue);
-    border: .7px solid var(--light-blue);
-}
-.nav-btn:active {
-    color: var(--blue);
-    border: .7px solid var(--blue);
 }
 
 .projects {

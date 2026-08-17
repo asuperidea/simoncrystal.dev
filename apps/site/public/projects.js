@@ -1,8 +1,8 @@
-fetch('projects.json')
+fetch('test.json')
     .then(res => res.json())
-    .then (projects => {
+    .then (data => {
         const container = document.getElementById('projectcards');
-        projects.forEach(project => {
+        data.projects.forEach(project => {
             const div = document.createElement('div');
             div.id = `'project'+${project.id}`;
             div.classList.add('card', 'projectcard', 'text-bg-dark');
@@ -11,7 +11,7 @@ fetch('projects.json')
                     <h5 class="jost-reg colorpri">${project.heading}</h5>
                     <hr style="width: 90%, border-color: var(--primary)">
                     <p class="jost-reg colorpri">${project.html}</p>
-                    <div id="project-links">${project.links.map(link => `<p class="jost-reg">${link}</p>`).join('')}</div>
+                    <div id="project-links" class="d-flex">${project.links.map(link => `<p class="jost-reg">${link}</p>`).join('')}</div>
                 </div
             `;
             container.appendChild(div);
@@ -19,11 +19,11 @@ fetch('projects.json')
     });
 
 
-fetch('blogs.json')
+fetch('test.json')
     .then(res => res.json())
-    .then (blogs => {
+    .then (data => {
         const blogcontainer = document.getElementById('blogcards');
-        blogs.forEach(blog => {
+        data.blogs.forEach(blog => {
             const div = document.createElement('div');
             div.id = `'blog'+${blog.id}`;
             div.classList.add('card', 'blogcard', 'text-bg-dark');
@@ -37,5 +37,20 @@ fetch('blogs.json')
                 </div
             `;
             blogcontainer.appendChild(div);
+        });
+    });
+
+fetch('test.json')
+    .then(res => res.json())
+    .then (data => {
+        const techcontainer = document.getElementById('techcont');
+        data.tech.forEach(tech => {
+            const div = document.createElement('div');
+            div.id = `${tech.id}`;
+            div.classList.add('techcard', 'text-center');
+            div.innerHTML = `
+                <p class="mt-1 jost-light">{ ${tech.heading} }</p>
+            `;
+            techcontainer.appendChild(div);
         });
     });
