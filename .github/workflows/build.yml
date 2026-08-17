@@ -25,6 +25,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add   apps/site/public/projects.json
-          git commit -m "updated universal.json via github actions" || echo "No changes"
+          git add   apps/site/public/test.json
+          git commit -m "updated test.json via github actions" || echo "No changes"
           git push
