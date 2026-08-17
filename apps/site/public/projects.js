@@ -7,12 +7,15 @@ fetch('test.json')
             div.id = `'project'+${project.id}`;
             div.classList.add('card', 'projectcard', 'text-bg-dark');
             div.innerHTML = `
-                <div class="card-body">
+                <div class="d-flex flex-column card-body">
                     <h5 class="jost-reg colorpri">${project.heading}</h5>
-                    <hr style="width: 90%, border-color: var(--primary)">
+                    <hr style="width: 90%; border-color: var(--primary)">
                     <p class="jost-reg colorpri">${project.html}</p>
-                    <div id="project-links" class="d-flex">${project.links.map(link => `<p class="jost-reg">${link}</p>`).join('')}</div>
-                </div
+                    <div id="project-links" class="d-flex flex-column mt-auto">
+                    ${project.links.map(link => 
+                        `<div class="projectlink jost-reg">${link}</div>`).join('')}
+                    </div>
+                </div>
             `;
             container.appendChild(div);
         });

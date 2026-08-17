@@ -20,10 +20,10 @@
         const params = new URLSearchParams(window.location.search);
         const slug = params.get('post');
 
-        fetch('blogs.json')
+        fetch('test.json')
             .then(res => res.json())
-            .then(blogs => {
-                const post = blogs.find(b => b.slug === slug);
+            .then(data => {
+                const post = data.blogs.find(b => b.slug === slug);
                 const container = document.getElementById('content');
 
                 if (post) {
