@@ -98,3 +98,9 @@ html a:active {
 .colortxt{
     color: var(--text);
 }
+
+@media screen and (max-width: 500px) {
+    html a {
+        text-decoration: underline;
+    }
+}

@@ -1,5 +1,14 @@
 div {
-    outline: 0px solid red;
+    outline: 1px solid red;
+}
+.mobilewarn {
+    height: 0rem;
+    width: 100%;
+    background-color: var(--red);
+    background-image: 
+    linear-gradient(rgb(130, 0, 0, 1) .1em, transparent .1rem), 
+    linear-gradient(90deg, rgba(130, 0, 0, 1) .1em, transparent .1rem);
+    background-size: 1rem 1rem;
 }
 .hero {
     height: 45rem;
@@ -11,13 +20,16 @@ div {
     background-size: 1rem 1rem;
 }
 .headline {
-    height: auto;;
+    height: auto;
     width: 50%;
     min-width: 25rem;
     max-width: 35rem;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 12rem;
+}
+.headlinetx {
+    font-size: 1.6rem;
 }
 .social {
     width: 50%;
@@ -100,4 +112,35 @@ div {
     z-index: 10;
     width: 100%;
     min-width: 25rem;
+}
+
+@media screen and (max-width: 500px) {
+    div {
+        max-width: 100% !important;
+    }
+    .mobilewarn {
+        height: 3rem;
+    }
+    .hero {
+        height: 40rem;
+    }
+    .headline{
+        width: 100%;
+        max-width: none;
+    }
+    .headlinetx{
+        font-size: 2rem;
+    }
+    .social{
+        margin-top: 2rem;
+    }
+    .projectcards{
+        grid-template-columns: repeat(auto-fit, minmax(95%, 100%));
+    }
+    .projectcard {
+        margin-bottom: 2rem;
+    }
+    .projectheading {
+        font-size: 2rem;
+    }
 }

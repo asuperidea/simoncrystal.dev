@@ -14,5 +14,3 @@ Day 3, the final day, was really stressful. We were up late into the early morni
 My teammates had to leave very early to catch their flight, leaving me with an issue: the game had a bug. Essentially, the button to start the minigame didn't call the correct function. Through some help from the amazing organizers and my teammates on Slack, I got the game working in time for the presentation!
 
 Although we didn't win any awards, the environment, experience, and project gave me a new love for hackathons.
-
-[Hack Club Macondo](https://macondo.hackclub.com)

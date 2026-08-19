@@ -8,8 +8,8 @@ fetch('test.json')
             div.classList.add('card', 'projectcard', 'text-bg-dark');
             div.innerHTML = `
                 <div class="d-flex flex-column card-body">
-                    <h5 class="jost-reg colorpri">${project.heading}</h5>
-                    <hr style="width: 90%; border-color: var(--primary)">
+                    <h5 class="jost-reg colorpri projectheading">${project.heading}</h5>
+                    <hr class="mx-auto" style="width: 95%; border-color: var(--primary)">
                     <p class="jost-reg colorpri">${project.html}</p>
                     <div id="project-links" class="d-flex flex-column mt-auto">
                     ${project.links.map(link => 
