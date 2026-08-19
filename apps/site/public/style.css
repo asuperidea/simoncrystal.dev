@@ -11,6 +11,11 @@
 html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow-x: hidden;
+  margin: 0;
+}
+body > *:last-child {
+  margin-bottom: 0;
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar {
