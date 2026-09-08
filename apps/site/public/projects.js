@@ -6,6 +6,9 @@ fetch('test.json')
             const div = document.createElement('div');
             div.id = `'project'+${project.id}`;
             div.classList.add('card', 'projectcard', 'text-bg-dark');
+            if (project.star){
+                div.classList.add('outlineProject');
+            };
             div.innerHTML = `
                 <div class="d-flex flex-column card-body">
                     <h5 class="jost-reg colorpri projectheading">${project.heading}</h5>
