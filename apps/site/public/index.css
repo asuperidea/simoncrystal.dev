@@ -84,6 +84,9 @@ div {
     width: 100%;
     min-width: 25rem;
 }
+.projectOutline{
+    outline: 1px solid var(--primary);
+}
 
 .blogs {
     overflow: auto;
