@@ -12,9 +12,11 @@ const files = fs.readdirSync(projectsDir).filter(f => f.endsWith('.md'));
 
 const projects = files.map(file => {
     const raw = fs.readFileSync(path.join(projectsDir, file), 'utf-8');
+    const hasStar = raw.includes('*');
+    const cleanedHeading = raw.replace(/\*/g, '');
     return {
         id: file.replace('.md', ''),
-        heading: raw
+        heading: cleanedHeading
             .split('\n')[0]
             .replace('# ', ''),
         html: marked.parseInline(raw
@@ -25,7 +27,8 @@ const projects = files.map(file => {
             .split('\n')
             .filter(line => line.startsWith('> '))
             .map(line => line.replace(/^> /, ''))
-            .map(link => marked.parseInline(link).replace(/<a /g, '<a class="colorpri" '))
+            .map(link => marked.parseInline(link).replace(/<a /g, '<a class="colorpri" ')),
+        star: hasStar
     };
 });
 
